@@ -1,0 +1,255 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #302c38;
+    line-height: 1.7;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #ece7f2;
+    padding: 19px 0;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: #6336a5;
+    font-size: 23px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: #42394e;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #8051c4;
+}
+
+.hero {
+    background: linear-gradient(120deg, #49247f, #8050bd);
+    color: #ffffff;
+    text-align: center;
+    padding: 85px 0;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: #e8dcfa;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: 0 auto 28px;
+    color: #f5effc;
+    font-size: 17px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 13px 27px;
+    background: #ffffff;
+    color: #6336a5;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.hero-button:hover {
+    background: #f0e8fa;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section h2 {
+    color: #6336a5;
+    font-size: 29px;
+    margin-bottom: 12px;
+}
+
+.about p,
+.section-heading p {
+    color: #696371;
+    max-width: 850px;
+}
+
+.articles-section {
+    background: #f8f6fb;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.count {
+    display: inline-block;
+    background: #eee6f8;
+    color: #6336a5;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 205px;
+    padding: 23px;
+    background: #ffffff;
+    border: 1px solid #e9e3f0;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(75, 38, 120, 0.10);
+}
+
+.number {
+    color: #8756c0;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.article-card h3 {
+    color: #342c3e;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.article-card a {
+    margin-top: auto;
+    color: #7041ad;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.article-card a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background: #302044;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.disclaimer {
+    color: #d9cde7;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+    .article-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-inner {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .section {
+        padding: 42px 0;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-card {
+        min-height: 175px;
+    }
+}
